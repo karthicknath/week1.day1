@@ -1,0 +1,34 @@
+package org.week1.day1;
+
+public class Student {
+
+	String name = "DB Jain College (Global Variable)";
+	short rollNo = 123;
+
+	public void college1() {
+		String name = "DB Jain College (Method Variable)";
+		System.out.println(name);
+	}
+
+	private int college2() {
+		int rollNo = 888;
+		System.out.println(rollNo);
+		return rollNo;
+	}
+
+	void college3(int rollNo) {
+
+		System.out.println(rollNo);
+	}
+
+	public static void main(String[] args) {
+
+		Student s = new Student();
+		String name2 = s.name;
+		System.out.println(name2);
+		s.college1();
+
+		int college2 = s.college2();
+		s.college3(college2);
+	}
+}
